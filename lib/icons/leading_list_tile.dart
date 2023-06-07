@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/constants/colors.dart';
 
 class LeadingListTile extends StatelessWidget {
   const LeadingListTile({super.key});
@@ -6,7 +7,7 @@ class LeadingListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CircleAvatar(
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: PurpleCustom,
       child: Icon(Icons.notes, color: Colors.white),
     );
   }

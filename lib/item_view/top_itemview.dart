@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/constants/colors.dart';
 import 'package:taskapp/constants/dimes.dart';
 import 'package:taskapp/widgets/days.dart';
 
@@ -8,11 +9,11 @@ class TopItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height *0.4,
+      height: MediaQuery.of(context).size.height * 0.4,
       child: Stack(
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: padBig),
+            padding: EdgeInsets.only(left: padLarge),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -23,8 +24,11 @@ class TopItemView extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.center,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+            child: Container(
+              height: 150,
+              margin: const EdgeInsets.only(left: padSmall, right: padSmall),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20), color: Colors.white),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -44,13 +48,23 @@ class TopItemView extends StatelessWidget {
                 width: 150,
                 height: 50,
                 child: ElevatedButton(
-                  style: ButtonStyle(shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)))),
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
+                          backgroundColor: MaterialStateProperty.all<Color>(PurpleCustom)
+                    ),
                     onPressed: () {},
                     child: Row(
                       children: const [
-                        Text("+", style: TextStyle(fontSize: 20),),
-                        SizedBox(width: widthSmall),
-                        Text("Add Task",style: TextStyle(fontSize: 20),)
+                        Text(
+                          "+",
+                          style: TextStyle(fontSize: fontSmall),
+                        ),
+                        SizedBox(width: padSmall),
+                        Text(
+                          "Add Task",
+                          style: TextStyle(fontSize: fontSmall),
+                        )
                       ],
                     )),
               ),

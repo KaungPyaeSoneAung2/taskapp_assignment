@@ -14,12 +14,12 @@ class BotItemView extends StatelessWidget {
           children: [
             
             const Padding(
-              padding: EdgeInsets.only(left: padLarge, top: padLarge),
+              padding: EdgeInsets.only(left: padLarge,top: padLarge),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "Task",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: fontMid, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
