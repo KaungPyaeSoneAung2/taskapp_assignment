@@ -8,7 +8,7 @@ class TaskListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: padSmall, right: padSmall, top: padSmall),
+      margin: const EdgeInsets.only(left: kPadSmall, right: kPadSmall, top: kPadSmall),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10)),
@@ -21,7 +21,7 @@ class TaskListTile extends StatelessWidget {
           children: [
             Text(
               taskName,
-              style: const TextStyle(fontSize: fontMid, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: kFontMid, fontWeight: FontWeight.bold),
             ),
             const Text('2 days ago'),
           ],
@@ -29,7 +29,7 @@ class TaskListTile extends StatelessWidget {
         leading:
             const SizedBox(height: double.infinity, child: LeadingListTile()),
         trailing: const SizedBox(
-            height: double.infinity, child: Icon(Icons.more_vert_outlined, size: fontBig,)),
+            height: double.infinity, child: Icon(Icons.more_vert_outlined, size: kFontBig,)),
       ),
     );
   }

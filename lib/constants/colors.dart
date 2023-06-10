@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-const Color PurpleCustom = Color.fromRGBO(124, 0, 247, 1);
+const Color kPurpleCustom = Color.fromRGBO(124, 0, 247, 1);

@@ -7,7 +7,7 @@ class LeadingListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CircleAvatar(
-      backgroundColor: PurpleCustom,
+      backgroundColor: kPurpleCustom,
       child: Icon(Icons.notes, color: Colors.white),
     );
   }

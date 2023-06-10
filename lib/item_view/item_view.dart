@@ -8,14 +8,14 @@ class ItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: const [
+    return const Stack(
+      children:[
         SizedBox(
             height: double.infinity,
             width: double.infinity,
             child:
                 DecoratedBox(decoration: BoxDecoration(color: Colors.black12))),
-        Padding(padding: EdgeInsets.only(top: padMid),
+        Padding(padding: EdgeInsets.only(top: kPadMid),
           child: Align(alignment: Alignment.topCenter, child: TopItemView())),
         Align(alignment: Alignment.bottomCenter, child: BotItemView()),
       ],

@@ -10,16 +10,15 @@ class BotItemView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SizedBox(
       height: MediaQuery.of(context).size.height *0.6,
-      child: Stack(
+      child: const Stack(
           children: [
-            
-            const Padding(
-              padding: EdgeInsets.only(left: padLarge,top: padLarge),
+            Padding(
+              padding: EdgeInsets.only(left: kPadLarge,top: kPadLarge),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "Task",
-                  style: TextStyle(fontSize: fontMid, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: kFontMid, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -29,7 +28,7 @@ class BotItemView extends StatelessWidget {
                 child: SizedBox(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [    
+                    children:[    
                   TaskListTile(taskName: "Project name"),
                   TaskListTile(taskName: "Project name"),
                   TaskListTile(taskName: "Project name"),

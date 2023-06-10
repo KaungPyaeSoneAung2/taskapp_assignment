@@ -13,7 +13,7 @@ class TopItemView extends StatelessWidget {
       child: Stack(
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: padLarge),
+            padding: EdgeInsets.only(left: kPadLarge),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -26,12 +26,12 @@ class TopItemView extends StatelessWidget {
             alignment: Alignment.center,
             child: Container(
               height: 150,
-              margin: const EdgeInsets.only(left: padSmall, right: padSmall),
+              margin: const EdgeInsets.only(left: kPadSmall, right: kPadSmall),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.white),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Days(dateNOw: "3", dayNOw: "SUN"),
                   Days(dateNOw: "4", dayNOw: "MON"),
                   Days(dateNOw: "5", dayNOw: "TUE"),
@@ -41,7 +41,7 @@ class TopItemView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: padSmall),
+            padding: const EdgeInsets.only(right: kPadSmall),
             child: Align(
               alignment: Alignment.topRight,
               child: SizedBox(
@@ -51,19 +51,19 @@ class TopItemView extends StatelessWidget {
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
-                          backgroundColor: MaterialStateProperty.all<Color>(PurpleCustom)
+                          backgroundColor: MaterialStateProperty.all<Color>(kPurpleCustom)
                     ),
                     onPressed: () {},
-                    child: Row(
-                      children: const [
+                    child: const Row(
+                      children: [
                         Text(
                           "+",
-                          style: TextStyle(fontSize: fontSmall),
+                          style: TextStyle(fontSize: kFontSmall),
                         ),
-                        SizedBox(width: padSmall),
+                        SizedBox(width: kPadSmall),
                         Text(
                           "Add Task",
-                          style: TextStyle(fontSize: fontSmall),
+                          style: TextStyle(fontSize: kFontSmall),
                         )
                       ],
                     )),
